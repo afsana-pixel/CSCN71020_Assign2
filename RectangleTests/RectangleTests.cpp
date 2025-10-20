@@ -13,6 +13,7 @@ namespace RectangleTests
 	{
 	public:
 		
+		//Test for getArea
 		TEST_METHOD(Test_GetArea)
 		{
 			int length = 10;
@@ -22,6 +23,7 @@ namespace RectangleTests
 			Assert::AreEqual(50, result);     //10 * 5 = 50
 		}
 
+		//Test for getPerimeter
 		TEST_METHOD(Test_GetPerimeter)
 		{
 			int length = 10;
@@ -49,7 +51,7 @@ namespace RectangleTests
 		{
 			int length = 5;
 			setLength(150, &length); //invalid, should not change
-			Assert::AreEqual(150, length);
+			Assert::AreEqual(5, length);
 		}
 
 		//Tests for setWidth
@@ -71,7 +73,7 @@ namespace RectangleTests
 		{
 			int width = 5;
 			setWidth(0, &width);
-			Assert::AreEqual(0, width);
+			Assert::AreEqual(5, width);
 		}
 	};
 }
